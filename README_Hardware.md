@@ -93,8 +93,19 @@ watch -n 1 sensors
 
 ## CPU
 
+```bash
 lscpu
+# Only architecture
+lscpu | grep "Architecture"
+# Number of CPUs
+lscpu | grep "CPU(s)"
+# Vendor + Model
+lscpu | grep "Model name"
+# Check Virtualization (VMs or containers)
+lscpu | grep "Virtualization"
 
+
+```
 stress:
 
 ```bash
@@ -115,8 +126,11 @@ sudo reboot
 nvidia-smi
 ```
 
-dpkg -l | grep -E 'nvidia|libnvidia'
+### Check existing nvidia drivers:
 
+```bash
+dpkg -l | grep -E 'nvidia|libnvidia'
+```
 
 
 
@@ -124,4 +138,6 @@ dpkg -l | grep -E 'nvidia|libnvidia'
 
 ## Battery
 
+```bash
 upower -i "$(upower -e | grep BAT)"
+```

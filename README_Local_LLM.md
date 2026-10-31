@@ -9,3 +9,5 @@ watch -n 1 sensors
 
 ollama ps
 ```
+
+

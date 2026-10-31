@@ -65,7 +65,7 @@ sudo apt install -y \
 | `ubuntu-drivers-common` | NVIDIA driver management |
 
 
-
+## Installing essentials:
 
 ```bash
 sudo apt update
@@ -78,4 +78,33 @@ sudo apt install -y \
     build-essential \
     cmake \
     gpg
+```
+
+## Installing QT for CopyQ:
+```bash
+sudo apt update
+sudo apt install qt6-base-dev qt6-base-private-dev libqt6svg6-dev qt6-tools-dev qt6-tools-dev-tools
+sudo apt install libqca-qt6-dev
+sudo apt install qtkeychain-qt6-dev
+sudo apt install extra-cmake-modules
+sudo apt install libxfixes-dev libxtst-dev
+sudo apt install qt6-declarative-dev
+# For wayland:
+sudo apt install libwayland-dev wayland-protocols
+
+rm -rf CMakeCache.txt
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local -DWITH_NATIVE_NOTIFICATIONS=OFF -DWITH_STATUS_NOTIFIER_ITEM=OFF -DWITH_AUDIO=OFF  . 
+make
+sudo make install
+
+
+```
+
+
+
+
+## Check Current Desktop Session
+
+```bash
+echo $XDG_SESSION_TYPE
 ```
