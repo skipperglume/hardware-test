@@ -34,6 +34,9 @@ sudo apt install -y \
 ```
 
 
+
+
+
 | Package | Tests |
 |---|---|
 | `stress-ng` | CPU + RAM + general system stability |
@@ -60,3 +63,19 @@ sudo apt install -y \
 | `vulkan-tools` | Vulkan/GPU detection |
 | `git/build-essential/cmake` | build GPU-test utilities |
 | `ubuntu-drivers-common` | NVIDIA driver management |
+
+
+
+
+```bash
+sudo apt update
+sudo apt install -y \
+    git \
+    curl \
+    vim \
+    htop \
+    tmux \
+    build-essential \
+    cmake \
+    gpg
+```

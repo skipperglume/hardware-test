@@ -79,13 +79,16 @@ fio \
 
 ## Temperatures and fans
 
-
+```bash
+# Manual find sensors
 sudo sensors-detect
+# Audo find sensors
 sudo sensors-detect --auto
-
+# List sensors measurments
 sensors
+# Continuous watch sensors
 watch -n 1 sensors
-
+```
 
 
 ## CPU
@@ -102,14 +105,15 @@ watch -n 1 sensors
 
 ## NVidia GPU
 
-
+```bash
+# List devices
 ubuntu-drivers devices
 sudo ubuntu-drivers install
 
 sudo reboot
 
 nvidia-smi
-
+```
 
 dpkg -l | grep -E 'nvidia|libnvidia'
 
