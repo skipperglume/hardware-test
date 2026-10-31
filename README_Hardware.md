@@ -49,8 +49,14 @@ sudo dmidecode --type memory | grep -E 'Size:|Type:|Speed:|Manufacturer:|Part Nu
 
 ### Quick RAM stress test
 
-stress-ng --vm 8 --vm-bytes 80% --verify --timeout 30m --metrics-brief
+```bash
+# Set to the performance settings:
+powerprofilesctl set performance
+```
 
+```bash
+stress-ng --vm 8 --vm-bytes 80% --verify --timeout 30m --metrics-brief
+```
 
 sudo memtester 50G 2
 
