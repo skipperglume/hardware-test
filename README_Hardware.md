@@ -52,13 +52,23 @@ sudo dmidecode --type memory | grep -E 'Size:|Type:|Speed:|Manufacturer:|Part Nu
 ```bash
 # Set to the performance settings:
 powerprofilesctl set performance
+# Set to optimal
+powerprofilesctl set balanced
+# See the options
+powerprofilesctl list
+# See current
+powerprofilesctl get
 ```
 
 ```bash
+#
 stress-ng --vm 8 --vm-bytes 80% --verify --timeout 30m --metrics-brief
+#
+stress-ng --cpu 0 --cpu-method all --verify --timeout 30m --metrics-brief
 ```
 
 sudo memtester 50G 2
+
 
 
 ## NVMe / SSD

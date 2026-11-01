@@ -15,4 +15,15 @@ watch -n 1 sensors
 ollama ps
 ```
 
+## Command to serve with ollama
 
+```bash
+ollama serve
+```
+## Check ollama serving
+
+```bash
+systemctl status ollama
+# Check with curl what ollama serves
+curl http://localhost:11434/api/tags
+```
